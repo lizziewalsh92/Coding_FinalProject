@@ -1,0 +1,206 @@
+BOROUGH,ZIP,HOUSE_NUM,STREET_NAME,REPORTING_YEAR,TANK_NUM,INSPECTION_PERFORMED,INSPECTION_DATE,GI_RESULT_INTERNAL_STRUCTURE,GI_RESULT_EXTERNAL_STRUCTURE,SI_RESULT_SEDIMENT,SI_RESULT_BIOLOGICAL_GROWTH,SI_RESULT_DEBRIS_INSECTS,SI_RESULT_RODENT_BIRD,ANALYTES,COLIFORM,ECOLI,MEET_STANDARDS,COMMUNITY_BOARD,COUNCIL_DISTRICT,CENSUS_TRACT,NTA
+MANHATTAN,10029,1220,Fifth Avenue,2021,1,Y,5/5/21,N,N,A,A,N,N,B,A,A,,11,8,168,East Harlem South
+MANHATTAN,10013,100,Centre street,2023,2,Y,11/28/23,N,A,N,N,N,N,B,A,A,,1,1,29,Chinatown
+MANHATTAN,10128,47,East 88th Street,2021,1,Y,4/20/21,N,N,A,A,N,N,B,A,A,,8,4,15002,Upper East Side-Carnegie Hill
+MANHATTAN,10013,125,worth street,2020,1,Y,12/19/20,A,N,A,A,A,N,B,A,A,,1,1,31,SoHo-TriBeCa-Civic Center-Little Italy
+MANHATTAN,10007,31,Chambers street,2020,1,Y,11/21/20,A,A,A,A,A,N,B,A,A,,1,1,31,SoHo-TriBeCa-Civic Center-Little Italy
+MANHATTAN,10065,301,East 66th Street,2021,1,Y,3/11/21,N,N,A,A,N,N,B,A,A,,8,5,118,Lenox Hill-Roosevelt Island
+MANHATTAN,10022,455,East 57th Street,2020,1,Y,10/21/20,N,N,A,N,A,N,B,A,A,,6,5,10601,Turtle Bay-East Midtown
+BROOKLYN,11201,138,Willoughby Street,2022,5,Y,6/20/22,N,N,A,N,A,N,B,A,A,,2,33,15,DUMBO-Vinegar Hill-Downtown Brooklyn-Boerum Hill
+MANHATTAN,10007,1,centre street,2022,4,Y,4/26/22,A,N,N,N,N,N,B,A,A,,1,1,29,Chinatown
+BRONX,10451,851,Grand Concourse,2020,2,Y,11/21/20,N,A,N,N,N,N,B,A,A,,4,8,63,West Concourse
+BROOKLYN,11201,45,monroe place,2021,1,Y,11/28/21,A,N,A,A,N,N,,,,,2,33,502,Brooklyn Heights-Cobble Hill
+MANHATTAN,10003,4,Irving Place,2024,2,Y,2/27/24,N,A,N,N,N,N,B,A,A,,6,2,50,Gramercy
+MANHATTAN,10029,1220,Fifth Avenue,2021,1,Y,5/5/21,N,N,A,A,N,N,B,A,A,,11,8,168,East Harlem South
+MANHATTAN,10001,25,West 32 Street,2021,1,Y,10/5/21,A,N,N,N,N,N,B,A,A,,5,4,76,Midtown-Midtown South
+BRONX,10462,1420,Wood Road,2020,1,Y,11/3/20,N,A,N,N,N,N,B,A,A,,9,18,21602,Parkchester
+BRONX,10451,265,east 161 street,2022,1,Y,12/15/22,A,A,A,N,N,N,B,A,A,,4,16,18302,East Concourse-Concourse Village
+MANHATTAN,10021,140,East 72nd Street,2021,1,Y,3/31/21,N,N,A,A,N,N,B,A,A,,8,4,128,Upper East Side-Carnegie Hill
+MANHATTAN,10007,1,Centre street,2023,1,Y,11/28/23,A,N,N,N,N,N,B,A,A,,1,1,29,Chinatown
+MANHATTAN,10007,225,Broadway,2021,1,Y,10/11/21,A,N,N,N,N,N,B,A,A,,1,1,21,SoHo-TriBeCa-Civic Center-Little Italy
+MANHATTAN,10007,1,Centre street,2024,2,Y,11/20/24,A,N,N,N,N,N,B,A,A,,1,1,29,Chinatown
+BROOKLYN,11201,345,adams street,2021,1,Y,11/28/21,A,N,N,N,N,N,B,A,A,,2,33,11,DUMBO-Vinegar Hill-Downtown Brooklyn-Boerum Hill
+MANHATTAN,10007,1,centre street,2022,2,Y,4/26/22,A,N,N,N,N,N,B,A,A,,1,1,29,Chinatown
+MANHATTAN,10024,270,W 89th St,2021,1,Y,10/12/21,A,N,N,N,N,N,B,A,A,,7,6,175,Upper West Side
+BRONX,10456,1118,Grand Concourse,2021,1,Y,11/21/21,N,A,A,N,A,A,B,A,A,,4,16,18102,East Concourse-Concourse Village
+MANHATTAN,10007,1,Centre street,2024,3,Y,11/20/24,A,N,N,N,N,N,B,A,A,,1,1,29,Chinatown
+STATEN ISLAND,10307,35,hale street,2022,1,Y,2/4/22,N,N,N,,N,,B,P,P,,3,51,248,Charleston-Richmond Valley-Tottenville
+MANHATTAN,10016,305,East 40th Street,2021,1,Y,4/29/21,N,N,A,A,N,N,B,A,A,,6,4,88,Turtle Bay-East Midtown
+BROOKLYN,11201,345,adams street,2021,3,Y,11/28/21,A,N,A,N,N,N,,,,,2,33,11,DUMBO-Vinegar Hill-Downtown Brooklyn-Boerum Hill
+BRONX,10456,1118,grand concourse,2022,1,Y,12/15/22,N,A,N,N,N,N,B,A,A,,4,16,18102,East Concourse-Concourse Village
+BROOKLYN,11201,360,adams street,2021,1,Y,12/12/21,N,A,A,N,N,N,B,A,A,,2,33,11,DUMBO-Vinegar Hill-Downtown Brooklyn-Boerum Hill
+MANHATTAN,10013,80,Centre street,2021,1,Y,12/19/21,A,A,A,A,N,N,,,,,1,1,29,Chinatown
+MANHATTAN,10065,812,Fifth Avenue,2021,1,Y,4/26/21,N,N,A,A,N,N,B,A,A,,8,4,11401,Upper East Side-Carnegie Hill
+MANHATTAN,10038,111,John St,2022,2,Y,4/4/22,A,N,N,N,N,N,B,A,A,,1,1,1502,Battery Park City-Lower Manhattan
+BROOKLYN,11201,138,Willoughby Street,2021,1,Y,6/14/21,N,N,A,N,A,N,B,A,A,,2,33,15,DUMBO-Vinegar Hill-Downtown Brooklyn-Boerum Hill
+MANHATTAN,10075,969,Fifth Avenue,2020,1,Y,8/31/20,N,N,A,A,A,N,B,A,A,,8,4,142,Upper East Side-Carnegie Hill
+MANHATTAN,10007,225,Broadway,2021,3,Y,10/11/21,A,N,N,N,N,N,B,A,A,,1,1,21,SoHo-TriBeCa-Civic Center-Little Italy
+MANHATTAN,10021,720,Park Avenue,2021,1,Y,6/23/21,N,N,N,N,N,A,B,A,A,,8,4,130,Upper East Side-Carnegie Hill
+MANHATTAN,10013,125,worth street,2022,2,Y,5/23/22,A,N,A,A,A,N,B,A,A,,1,1,31,SoHo-TriBeCa-Civic Center-Little Italy
+MANHATTAN,10007,225,Broadway,2021,4,Y,10/11/21,A,N,N,N,N,N,B,A,A,,1,1,21,SoHo-TriBeCa-Civic Center-Little Italy
+BROOKLYN,11201,138,Willoughby Street,2022,1,Y,6/20/22,N,N,A,N,A,N,B,A,A,,2,33,15,DUMBO-Vinegar Hill-Downtown Brooklyn-Boerum Hill
+MANHATTAN,10007,1,Centre street,2023,2,Y,11/28/23,A,N,N,N,N,N,B,A,A,,1,1,29,Chinatown
+MANHATTAN,10038,111,John St,2021,1,Y,11/10/21,A,A,N,N,N,N,B,A,A,,1,1,1502,Battery Park City-Lower Manhattan
+MANHATTAN,10018,108,West 39th St,2021,1,Y,12/20/21,N,A,N,N,N,N,B,A,A,,5,4,113,Midtown-Midtown South
+BROOKLYN,11201,210,Joralemon Street,2020,2,Y,11/28/20,A,A,A,N,A,A,B,A,A,,2,33,9,Brooklyn Heights-Cobble Hill
+MANHATTAN,10007,60,centre street,2021,2,Y,12/19/21,A,N,A,N,A,N,,,,,1,1,29,Chinatown
+BROOKLYN,11201,45,monroe place,2024,1,Y,10/26/24,A,N,N,A,N,N,B,A,A,,2,33,502,Brooklyn Heights-Cobble Hill
+STATEN ISLAND,10307,35,Hale Street,2020,1,Y,1/1/20,A,N,N,N,N,N,B,A,A,,3,51,248,Charleston-Richmond Valley-Tottenville
+MANHATTAN,10013,80,Centre street,2021,1,Y,12/19/21,A,A,A,A,N,N,B,A,A,,1,1,29,Chinatown
+MANHATTAN,10003,4,Irving Place,2023,1,Y,3/28/23,N,A,N,N,N,N,B,A,A,,6,2,50,Gramercy
+BROOKLYN,11201,345,Adams street,2024,2,Y,12/5/24,A,N,N,N,N,N,B,A,A,,2,33,11,DUMBO-Vinegar Hill-Downtown Brooklyn-Boerum Hill
+MANHATTAN,10065,53,East 66th Street,2021,1,Y,4/30/21,N,N,A,A,N,N,B,A,A,,8,4,122,Upper East Side-Carnegie Hill
+MANHATTAN,10036,145,West 44 Street,2020,2,Y,12/16/20,N,A,N,N,N,N,B,A,A,,5,4,119,Midtown-Midtown South
+MANHATTAN,10001,121,West 27th St,2022,1,Y,7/11/22,N,N,A,A,N,N,B,A,A,,5,3,95,Midtown-Midtown South
+MANHATTAN,10021,140,East 72nd Street,2021,1,Y,3/31/21,N,N,A,A,N,N,B,A,A,,8,4,128,Upper East Side-Carnegie Hill
+MANHATTAN,10019,15,West 56th Street,2021,1,Y,2/11/21,N,N,A,N,A,A,B,A,A,,5,4,11201,Midtown-Midtown South
+BROOKLYN,11201,138,Willoughby Street,2021,2,Y,6/14/21,N,N,A,N,A,N,B,A,A,,2,33,15,DUMBO-Vinegar Hill-Downtown Brooklyn-Boerum Hill
+BROOKLYN,11201,360,Adams street,2023,1,Y,11/1/23,N,A,N,N,N,N,B,A,A,,2,33,11,DUMBO-Vinegar Hill-Downtown Brooklyn-Boerum Hill
+MANHATTAN,10038,150,William Street,2021,2,Y,11/10/21,A,N,A,N,N,N,B,A,A,,1,1,1501,Battery Park City-Lower Manhattan
+MANHATTAN,10013,125,worth street,2021,1,Y,12/10/21,A,N,A,A,N,N,,,,,1,1,31,SoHo-TriBeCa-Civic Center-Little Italy
+STATEN ISLAND,10307,35,hale street,2022,1,Y,2/4/22,N,N,N,,N,,B,P,P,,3,51,248,Charleston-Richmond Valley-Tottenville
+BROOKLYN,11201,210,Joralemon Street,2020,3,Y,11/28/20,A,A,A,N,A,A,B,A,A,,2,33,9,Brooklyn Heights-Cobble Hill
+BRONX,10462,1551,Unionport Road,2020,1,Y,10/19/20,A,N,N,N,N,N,B,A,A,,9,18,212,Parkchester
+MANHATTAN,10038,111,John St,2022,3,Y,4/4/22,A,N,N,N,N,N,B,A,A,,1,1,1502,Battery Park City-Lower Manhattan
+MANHATTAN,10013,100,Centre street,2024,2,Y,11/27/24,N,A,N,N,N,N,B,A,A,,1,1,29,Chinatown
+MANHATTAN,10013,125,worth street,2022,2,Y,5/23/22,A,N,A,A,A,N,B,A,A,,1,1,31,SoHo-TriBeCa-Civic Center-Little Italy
+MANHATTAN,10007,1,Centre street,2024,1,Y,11/20/24,A,N,N,N,N,N,B,A,A,,1,1,29,Chinatown
+BROOKLYN,11201,360,adams street,2021,1,Y,12/12/21,N,A,A,N,N,N,,,,,2,33,11,DUMBO-Vinegar Hill-Downtown Brooklyn-Boerum Hill
+MANHATTAN,10007,225,Broadway,2021,2,Y,10/11/21,A,N,N,N,N,N,B,A,A,,1,1,21,SoHo-TriBeCa-Civic Center-Little Italy
+BRONX,10462,1469,East Avenue,2020,1,Y,10/21/20,A,N,N,N,N,N,B,A,A,,9,18,212,Parkchester
+MANHATTAN,10029,230,East 115th Street,2020,1,Y,9/30/20,A,N,N,N,A,N,B,A,A,,11,8,180,East Harlem North
+MANHATTAN,10013,100,Centre street,2021,1,Y,12/5/21,N,A,A,N,A,N,,,,,1,1,29,Chinatown
+MANHATTAN,10128,47,East 88th Street,2021,1,Y,4/20/21,N,N,A,A,N,N,B,A,A,,8,4,15002,Upper East Side-Carnegie Hill
+QUEENS,11377,40-35,72 Street,2021,1,Y,9/22/21,A,N,N,N,N,N,B,A,A,,4,25,265,Elmhurst-Maspeth
+BRONX,10451,265,east 161 street,2021,1,Y,12/3/21,A,A,A,N,A,N,,,,,4,16,18302,East Concourse-Concourse Village
+BROOKLYN,11201,345,Adams street,2022,1,Y,6/23/22,A,N,N,N,N,N,B,A,A,,2,33,11,DUMBO-Vinegar Hill-Downtown Brooklyn-Boerum Hill
+MANHATTAN,10013,125,worth street,2021,2,Y,12/10/21,N,N,A,A,N,N,,,,,1,1,31,SoHo-TriBeCa-Civic Center-Little Italy
+MANHATTAN,10007,31,Chambers street,2020,1,Y,11/21/20,A,A,A,A,A,N,B,A,A,,1,1,31,SoHo-TriBeCa-Civic Center-Little Italy
+BROOKLYN,11201,345,Adams street,2022,2,Y,6/23/22,A,N,N,N,N,N,B,A,A,,2,33,11,DUMBO-Vinegar Hill-Downtown Brooklyn-Boerum Hill
+BRONX,10462,44,Metropolitan Oval,2020,1,Y,10/19/20,A,N,N,N,N,N,B,A,A,,9,18,212,Parkchester
+BROOKLYN,11201,138,Willoughby Street,2024,1,Y,6/24/24,N,N,A,N,N,N,B,P,A,,2,33,15,DUMBO-Vinegar Hill-Downtown Brooklyn-Boerum Hill
+MANHATTAN,10013,80,Centre Street,2022,1,Y,6/1/22,A,A,N,N,N,N,B,A,A,,1,1,29,Chinatown
+BROOKLYN,11201,360,Adams street,2024,2,Y,10/26/24,N,A,N,N,N,N,B,A,A,,2,33,11,DUMBO-Vinegar Hill-Downtown Brooklyn-Boerum Hill
+BRONX,10456,1118,Grand Concourse,2020,1,Y,11/21/20,N,A,A,N,A,A,B,A,A,,4,16,18102,East Concourse-Concourse Village
+MANHATTAN,10013,100,Centre street,2021,1,Y,12/5/21,N,A,A,N,A,N,B,A,A,,1,1,29,Chinatown
+MANHATTAN,10029,70,East 108th Street,2020,2,Y,10/7/20,N,N,N,N,N,A,B,A,A,,11,8,17401,East Harlem South
+MANHATTAN,10038,111,John St,2021,3,Y,11/10/21,A,N,N,N,N,N,B,A,A,,1,1,1502,Battery Park City-Lower Manhattan
+BRONX,10451,265,east 161 street,2022,1,Y,12/15/22,A,A,A,N,N,N,B,A,A,,4,16,18302,East Concourse-Concourse Village
+MANHATTAN,10028,1056,Fifth Avenue,2020,1,Y,6/24/20,N,N,A,N,A,N,B,A,A,,8,4,15002,Upper East Side-Carnegie Hill
+BROOKLYN,11201,210,Joralemon street,2023,1,Y,11/1/23,A,N,N,N,N,N,B,A,A,,2,33,9,Brooklyn Heights-Cobble Hill
+BRONX,10475,100,Dreiser Loop,2023,1,Y,2/19/23,A,A,N,N,N,N,,,,N,10,12,46201,Co-op City
+MANHATTAN,10003,4,Irving Place,2020,2,Y,5/16/20,N,A,N,N,N,N,B,A,A,,6,2,50,Gramercy
+MANHATTAN,10036,145,West 44 Street,2020,2,Y,12/16/20,N,A,N,N,N,N,B,A,A,,5,4,119,Midtown-Midtown South
+BRONX,10475,100,Dreiser Loop,2022,1,Y,10/31/22,A,A,N,N,N,N,,,,N,10,12,46201,Co-op City
+MANHATTAN,10036,520,12th Ave,2021,1,Y,11/22/21,N,A,N,N,N,A,B,A,A,,4,3,129,Clinton
+MANHATTAN,10007,1,centre street,2022,6,Y,4/26/22,A,N,N,N,N,N,B,A,A,,1,1,29,Chinatown
+MANHATTAN,10013,100,Centre Street,2022,4,Y,5/26/22,N,A,A,N,A,N,B,A,A,,1,1,29,Chinatown
+MANHATTAN,10065,812,Fifth Avenue,2021,1,Y,4/26/21,N,N,A,A,N,N,B,A,A,,8,4,11401,Upper East Side-Carnegie Hill
+MANHATTAN,10011,31,West 17 Street,2020,1,Y,12/31/20,A,N,N,N,N,N,B,A,A,,5,3,54,Hudson Yards-Chelsea-Flatiron-Union Square
+MANHATTAN,10022,541,Lexington Avenue,2021,1,Y,4/20/21,N,N,A,N,A,N,B,A,A,,6,4,100,Turtle Bay-East Midtown
+BROOKLYN,11201,210,Joralemon Street,2020,1,Y,11/28/20,A,A,A,N,A,A,B,A,A,,2,33,9,Brooklyn Heights-Cobble Hill
+MANHATTAN,10013,100,Centre Street,2022,1,Y,5/6/22,N,A,A,N,A,N,B,A,A,,1,1,29,Chinatown
+BROOKLYN,11201,360,Adams street,2023,2,Y,11/1/23,N,A,N,N,N,N,B,A,A,,2,33,11,DUMBO-Vinegar Hill-Downtown Brooklyn-Boerum Hill
+MANHATTAN,10013,100,Centre Street,2022,4,Y,5/26/22,N,A,A,N,A,N,B,A,A,,1,1,29,Chinatown
+MANHATTAN,10075,955,Fifth Avenue,2020,1,Y,10/1/20,N,N,A,A,N,N,B,A,A,,8,4,130,Upper East Side-Carnegie Hill
+MANHATTAN,10013,80,centre street,2020,1,Y,12/19/20,A,A,A,A,A,A,B,A,A,,1,1,29,Chinatown
+BROOKLYN,11201,138,Willoughby Street,2022,2,Y,6/20/22,N,N,A,N,A,N,B,A,A,,2,33,15,DUMBO-Vinegar Hill-Downtown Brooklyn-Boerum Hill
+MANHATTAN,10007,1,centre street,2022,3,Y,4/26/22,A,N,N,N,N,N,B,A,A,,1,1,29,Chinatown
+BRONX,10451,265,east 161 street,2021,1,Y,12/3/21,A,A,A,N,A,N,B,A,A,,4,16,18302,East Concourse-Concourse Village
+MANHATTAN,10002,160,Madison Street,2020,2,Y,10/22/20,N,N,N,N,N,A,B,A,A,,3,1,6,Lower East Side
+MANHATTAN,10007,60,centre street,2021,2,Y,12/19/21,A,N,A,N,A,N,B,A,A,,1,1,29,Chinatown
+BROOKLYN,11201,360,Adams street,2022,1,Y,6/1/22,N,A,N,N,N,N,B,A,A,,2,33,11,DUMBO-Vinegar Hill-Downtown Brooklyn-Boerum Hill
+BROOKLYN,11201,45,Monroe place,2022,1,Y,6/23/22,A,N,N,N,N,N,B,A,A,,2,33,502,Brooklyn Heights-Cobble Hill
+BROOKLYN,11201,360,Adams street,2022,2,Y,6/1/22,N,A,N,N,N,N,B,A,A,,2,33,11,DUMBO-Vinegar Hill-Downtown Brooklyn-Boerum Hill
+BROOKLYN,11201,138,Willoughby Street,2022,3,Y,6/20/22,N,N,A,N,A,N,B,A,A,,2,33,15,DUMBO-Vinegar Hill-Downtown Brooklyn-Boerum Hill
+MANHATTAN,10013,100,centre street,2020,1,Y,12/5/20,N,A,A,N,A,N,B,A,A,,1,1,29,Chinatown
+MANHATTAN,10022,136,East 57 Street,2021,1,Y,3/13/21,A,N,N,N,N,N,B,A,A,,6,4,11203,Turtle Bay-East Midtown
+MANHATTAN,10065,201,East 62nd Street,2020,1,Y,7/7/20,N,N,A,N,A,N,B,A,A,,8,4,110,Lenox Hill-Roosevelt Island
+MANHATTAN,10013,125,worth street,2020,2,Y,12/19/20,A,N,A,A,A,A,B,A,A,,1,1,31,SoHo-TriBeCa-Civic Center-Little Italy
+MANHATTAN,10013,125,worth street,2022,1,Y,5/23/22,A,N,A,A,A,N,B,A,A,,1,1,31,SoHo-TriBeCa-Civic Center-Little Italy
+BROOKLYN,11210,1655,Flatbush Avenue,2020,1,Y,10/7/20,N,A,N,N,N,N,B,A,A,,18,45,776,Flatlands
+BROOKLYN,11201,360,Adams street,2024,1,Y,10/26/24,N,A,N,N,N,N,B,A,A,,2,33,11,DUMBO-Vinegar Hill-Downtown Brooklyn-Boerum Hill
+MANHATTAN,10028,1020,Fifth Avenue,2021,1,Y,5/5/21,N,N,A,A,N,N,B,A,A,,8,4,142,Upper East Side-Carnegie Hill
+MANHATTAN,10013,100,Centre Street,2022,1,Y,5/6/22,N,A,A,N,A,N,B,A,A,,1,1,29,Chinatown
+MANHATTAN,10013,125,worth street,2022,1,Y,5/23/22,A,N,A,A,A,N,B,A,A,,1,1,31,SoHo-TriBeCa-Civic Center-Little Italy
+MANHATTAN,10065,53,East 66th Street,2021,1,Y,4/30/21,N,N,A,A,N,N,B,A,A,,8,4,122,Upper East Side-Carnegie Hill
+MANHATTAN,10013,125,worth street,2021,1,Y,12/10/21,A,N,A,A,N,N,B,A,A,,1,1,31,SoHo-TriBeCa-Civic Center-Little Italy
+BRONX,10451,265,east 161 street,2024,1,Y,11/9/24,A,A,N,N,N,N,B,A,A,,4,16,18302,East Concourse-Concourse Village
+MANHATTAN,10021,720,Park Avenue,2021,1,Y,6/23/21,N,N,N,N,N,A,B,A,A,,8,4,130,Upper East Side-Carnegie Hill
+MANHATTAN,10065,812,Fifth Avenue,2020,1,Y,5/14/20,N,N,A,N,A,N,B,A,A,,8,4,11401,Upper East Side-Carnegie Hill
+MANHATTAN,10013,125,worth street,2022,2,Y,5/23/22,A,N,A,A,A,N,B,A,A,,1,1,31,SoHo-TriBeCa-Civic Center-Little Italy
+MANHATTAN,10013,100,centre street,2020,2,Y,12/5/20,N,A,A,N,A,N,B,A,A,,1,1,29,Chinatown
+MANHATTAN,10003,4,Irving Place,2023,2,Y,3/28/23,N,A,N,N,N,N,B,A,A,,6,2,50,Gramercy
+BROOKLYN,11201,138,Willoughby Street,2021,3,Y,6/14/21,N,N,A,N,A,N,B,A,A,,2,33,15,DUMBO-Vinegar Hill-Downtown Brooklyn-Boerum Hill
+BRONX,10462,1470,West Avenue,2020,1,Y,11/3/20,A,N,N,N,N,N,B,A,A,,9,18,21602,Parkchester
+MANHATTAN,10007,60,centre street,2021,1,Y,12/19/21,A,N,A,N,A,N,,,,,1,1,29,Chinatown
+BROOKLYN,11201,45,monroe place,2021,1,Y,11/28/21,A,N,A,A,N,N,B,A,A,,2,33,502,Brooklyn Heights-Cobble Hill
+MANHATTAN,10013,125,worth street,2022,1,Y,5/23/22,A,N,A,A,A,N,B,A,A,,1,1,31,SoHo-TriBeCa-Civic Center-Little Italy
+BROOKLYN,11201,345,Adams Street,2020,1,Y,11/28/20,A,N,A,N,A,N,B,A,A,,2,33,11,DUMBO-Vinegar Hill-Downtown Brooklyn-Boerum Hill
+BROOKLYN,11201,345,Adams Street,2020,2,Y,11/28/20,A,N,A,N,A,N,B,A,A,,2,33,11,DUMBO-Vinegar Hill-Downtown Brooklyn-Boerum Hill
+MANHATTAN,10026,70,Lenox Ave,2021,1,Y,5/4/21,A,N,N,N,N,N,B,A,A,,10,9,186,Central Harlem South
+BROOKLYN,11201,45,Monroe Place,2020,1,Y,12/12/20,A,A,A,A,N,N,B,A,A,,2,33,502,Brooklyn Heights-Cobble Hill
+STATEN ISLAND,10307,35,hale street,2022,1,Y,2/4/22,N,N,N,,N,,B,P,P,,3,51,248,Charleston-Richmond Valley-Tottenville
+MANHATTAN,10007,60,centre street,2020,1,Y,12/19/20,N,N,A,N,A,N,B,A,A,,1,1,29,Chinatown
+MANHATTAN,10013,125,worth street,2021,2,Y,12/10/21,N,N,A,A,N,N,B,A,A,,1,1,31,SoHo-TriBeCa-Civic Center-Little Italy
+MANHATTAN,10013,100,Centre street,2023,1,Y,11/28/23,N,A,N,N,N,N,B,A,A,,1,1,29,Chinatown
+BROOKLYN,11201,210,Joralemon street,2022,3,Y,8/11/22,A,A,N,N,N,N,B,A,A,,2,33,9,Brooklyn Heights-Cobble Hill
+MANHATTAN,10022,866,Third Ave,2021,1,Y,7/8/21,A,N,N,N,N,N,B,A,A,,6,4,100,Turtle Bay-East Midtown
+MANHATTAN,10007,60,centre street,2021,1,Y,12/19/21,A,N,A,N,A,N,B,A,A,,1,1,29,Chinatown
+BRONX,10454,640,East 137 Street,2021,2,Y,11/4/21,A,N,N,N,N,N,B,A,A,,1,8,2701,Mott Haven-Port Morris
+QUEENS,11106,34-27,34th St,2021,1,Y,1/1/21,N,N,N,N,N,A,B,A,P,N,1,26,57,Astoria
+MANHATTAN,10007,1,centre street,2022,1,Y,4/26/22,A,N,N,N,N,N,B,A,A,,1,1,29,Chinatown
+MANHATTAN,10038,111,John St,2021,2,Y,11/10/21,A,A,N,N,N,N,B,A,A,,1,1,1502,Battery Park City-Lower Manhattan
+MANHATTAN,10007,1,Centre street,2023,3,Y,11/28/23,A,N,N,N,N,N,B,A,A,,1,1,29,Chinatown
+MANHATTAN,10007,31,Chambers street,2021,2,Y,12/10/21,A,A,A,A,A,A,,,,,1,1,31,SoHo-TriBeCa-Civic Center-Little Italy
+BROOKLYN,11201,190,Willoughby Street,2020,1,Y,9/24/20,N,A,N,N,N,N,B,A,A,,2,35,31,Fort Greene
+MANHATTAN,10007,31,Chambers street,2020,2,Y,11/21/20,A,A,A,A,A,A,B,A,A,,1,1,31,SoHo-TriBeCa-Civic Center-Little Italy
+MANHATTAN,10029,70,East 108th Street,2020,1,Y,10/6/20,N,N,N,N,N,A,B,A,A,,11,8,17401,East Harlem South
+MANHATTAN,10007,1,centre street,2022,7,Y,4/26/22,A,N,N,N,N,N,B,A,A,,1,1,29,Chinatown
+MANHATTAN,10007,1,centre street,2022,5,Y,4/26/22,A,N,N,N,N,N,B,A,A,,1,1,29,Chinatown
+BROOKLYN,11201,300,Jay Street,2022,1,Y,4/26/22,N,N,A,N,A,N,B,A,A,,2,33,13,DUMBO-Vinegar Hill-Downtown Brooklyn-Boerum Hill
+QUEENS,11106,34-27,34th St,2021,1,N,1/1/21,,,,,,,B,A,P,N,1,26,57,Astoria
+MANHATTAN,10023,30,West 70th St,2022,1,Y,3/16/22,A,N,N,N,N,N,B,A,A,,7,6,153,Lincoln Square
+QUEENS,11106,34-27,34th St,2021,1,Y,1/1/21,N,,,A,N,A,B,A,P,N,1,26,57,Astoria
+MANHATTAN,10013,100,Centre street,2024,1,Y,11/27/24,A,N,N,N,N,N,B,A,A,,1,1,29,Chinatown
+BROOKLYN,11206,18,Boerum St,2021,1,Y,10/27/21,A,A,N,N,N,N,B,A,A,,1,34,491,East Williamsburg
+BROOKLYN,11201,345,Adams street,2024,3,Y,12/5/24,A,N,N,N,N,N,B,A,A,,2,33,11,DUMBO-Vinegar Hill-Downtown Brooklyn-Boerum Hill
+BROOKLYN,11217,62,HANSON PLACE,2023,1,Y,8/23/23,N,N,N,N,N,N,B,P,A,,2,35,35,Fort Greene
+MANHATTAN,10013,100,Centre Street,2022,3,Y,5/6/22,N,A,A,N,A,N,B,A,A,,1,1,29,Chinatown
+BROOKLYN,11201,138,Willoughby Street,2021,5,Y,6/14/21,N,N,A,N,A,N,B,A,A,,2,33,15,DUMBO-Vinegar Hill-Downtown Brooklyn-Boerum Hill
+BROOKLYN,11201,45,monroe place,2023,1,Y,11/16/23,A,N,N,N,N,N,B,A,A,,2,33,502,Brooklyn Heights-Cobble Hill
+BROOKLYN,11201,210,Joralemon street,2023,2,Y,11/1/23,A,N,N,N,N,N,B,A,A,,2,33,9,Brooklyn Heights-Cobble Hill
+BROOKLYN,11201,138,Willoughby Street,2021,4,Y,6/14/21,N,N,A,N,A,N,B,A,A,,2,33,15,DUMBO-Vinegar Hill-Downtown Brooklyn-Boerum Hill
+MANHATTAN,10001,441,Ninth Ave,2021,2,Y,11/2/21,A,N,N,N,N,N,B,A,A,,4,3,111,Hudson Yards-Chelsea-Flatiron-Union Square
+BROOKLYN,11201,210,Joralemon street,2022,2,Y,8/11/22,A,A,N,N,N,N,B,A,A,,2,33,9,Brooklyn Heights-Cobble Hill
+BRONX,10462,1560,Metropolitan Ave,2020,1,Y,10/28/20,A,N,N,N,N,N,B,A,A,,9,18,21002,Parkchester
+BRONX,10451,265,East 161 street,2020,1,Y,11/21/20,A,A,A,N,A,N,B,A,A,,4,16,18302,East Concourse-Concourse Village
+BROOKLYN,11201,345,Adams Street,2020,3,Y,11/28/20,A,N,A,N,A,N,B,A,A,,2,33,11,DUMBO-Vinegar Hill-Downtown Brooklyn-Boerum Hill
+BRONX,10451,265,east 161 street,2023,1,Y,11/17/23,A,A,N,N,N,N,B,A,A,,4,16,18302,East Concourse-Concourse Village
+BROOKLYN,11201,300,Jay Street,2022,2,Y,5/13/22,N,N,A,N,A,N,B,A,A,,2,33,13,DUMBO-Vinegar Hill-Downtown Brooklyn-Boerum Hill
+MANHATTAN,10065,301,East 66th Street,2021,1,Y,3/11/21,N,N,A,A,N,N,B,A,A,,8,5,118,Lenox Hill-Roosevelt Island
+MANHATTAN,10016,382,Third Ave,2021,1,Y,9/22/21,A,N,N,N,N,N,B,A,A,,6,2,68,Gramercy
+STATEN ISLAND,10307,35,hale street,2022,1,Y,2/4/22,N,N,N,,N,,B,P,P,,3,51,248,Charleston-Richmond Valley-Tottenville
+MANHATTAN,10013,100,Centre Street,2022,3,Y,5/6/22,N,A,A,N,A,N,B,A,A,,1,1,29,Chinatown
+BROOKLYN,11217,62,HANSON PLACE,2023,1,Y,8/23/23,N,N,N,N,N,N,B,P,A,,2,35,35,Fort Greene
+MANHATTAN,10036,145,West 44 Street,2020,2,Y,12/16/20,N,A,N,N,N,N,B,A,A,,5,4,119,Midtown-Midtown South
+BROOKLYN,11201,345,adams street,2021,1,Y,11/28/21,A,N,N,N,N,N,,,,,2,33,11,DUMBO-Vinegar Hill-Downtown Brooklyn-Boerum Hill
+MANHATTAN,10012,90,prince st,2021,1,Y,9/29/21,A,A,N,N,N,N,B,A,A,,2,1,49,SoHo-TriBeCa-Civic Center-Little Italy
+MANHATTAN,10031,181,Convent Avenue,2024,2,Y,12/27/24,N,N,A,N,N,N,B,P,A,,9,9,21703,Manhattanville
+BRONX,10456,1118,Grand Concourse,2021,1,Y,11/21/21,N,A,A,N,A,A,,,,,4,16,18102,East Concourse-Concourse Village
+MANHATTAN,10007,31,Chambers street,2021,1,Y,12/10/21,A,A,A,A,A,A,,,,,1,1,31,SoHo-TriBeCa-Civic Center-Little Italy
+MANHATTAN,10002,160,Madison Street,2020,1,Y,10/21/20,N,N,N,A,N,N,B,A,A,,3,1,6,Lower East Side
+MANHATTAN,10017,310,East 46th Street,2020,1,Y,10/7/20,N,N,N,A,N,N,B,A,A,,6,4,90,Turtle Bay-East Midtown
+BROOKLYN,11201,345,Adams street,2022,3,Y,6/23/22,A,N,N,N,N,N,B,A,A,,2,33,11,DUMBO-Vinegar Hill-Downtown Brooklyn-Boerum Hill
+MANHATTAN,10007,60,centre street,2020,2,Y,12/19/20,A,N,A,N,A,N,B,A,A,,1,1,29,Chinatown
+BRONX,10462,22,Metropolitan Oval,2020,1,Y,10/26/20,A,N,N,N,N,N,B,A,A,,9,18,21002,Parkchester
+MANHATTAN,10013,100,centre street,2020,3,Y,12/5/20,N,A,N,N,A,N,B,A,A,,1,1,29,Chinatown
+MANHATTAN,10013,100,Centre Street,2022,2,Y,5/6/22,N,A,A,N,A,N,B,A,A,,1,1,29,Chinatown
+MANHATTAN,10013,100,Centre Street,2022,2,Y,5/6/22,N,A,A,N,A,N,B,A,A,,1,1,29,Chinatown
+MANHATTAN,10038,111,John St,2022,1,Y,4/4/22,A,A,N,N,N,N,B,A,A,,1,1,1502,Battery Park City-Lower Manhattan
+MANHATTAN,10016,305,East 40th Street,2021,1,Y,4/29/21,N,N,A,A,N,N,B,A,A,,6,4,88,Turtle Bay-East Midtown
+BROOKLYN,11201,345,Adams street,2024,1,Y,12/5/24,A,N,N,N,N,N,B,A,A,,2,33,11,DUMBO-Vinegar Hill-Downtown Brooklyn-Boerum Hill
+BROOKLYN,11201,345,adams street,2021,3,Y,11/28/21,A,N,A,N,N,N,B,A,A,,2,33,11,DUMBO-Vinegar Hill-Downtown Brooklyn-Boerum Hill
+BROOKLYN,11201,210,Joralemon street,2022,1,Y,8/11/22,A,A,N,N,N,N,B,A,A,,2,33,9,Brooklyn Heights-Cobble Hill
+BROOKLYN,11201,138,Willoughby Street,2022,4,Y,6/20/22,N,N,A,N,A,N,B,A,A,,2,33,15,DUMBO-Vinegar Hill-Downtown Brooklyn-Boerum Hill
+MANHATTAN,10022,4,Sutton Place,2020,1,Y,10/27/20,N,N,A,A,N,N,B,A,A,,6,5,10601,Turtle Bay-East Midtown
