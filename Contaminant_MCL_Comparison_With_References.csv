@@ -1,0 +1,22 @@
+Contaminant,Canada MCL,EU MCL,EPA MCL,NYS MCL,Notes,References
+Bromate,0.01 mg/L,0.01 mg/L,0.01 mg/L,0.01 mg/L,Disinfection byproduct; regulated in NYS.,"Health Canada, EU Drinking Water Directive, EPA MCL List, NY DOH"
+Hexavalent Chromium ,,,,,,
+Nickel,0.02 mg/L,0.02 mg/L,NR,NR,Found in plumbing; NYS does not currently set a standard.,"Health Canada, EU Directive 2020/2184"
+Manganese,0.12 mg/L (Aesthetic),0.05 mg/L,NR,NR*,NYS uses guidance values but no enforceable MCL.,"Health Canada (Guidelines for Canadian Drinking Water Quality), EU Directive 2020/2184"
+Cyanide,0.2 mg/L,0.05 mg/L,0.2 mg/L,0.2 mg/L,Regulated in NYS in line with EPA.,"Health Canada, EU Drinking Water Directive, EPA MCL List, NY DOH"
+"1,2-Dichloroethane",0.005 mg/L,0.003 mg/L,0.005 mg/L,0.005 mg/L,Industrial solvent; regulated in NYS.,"Health Canada, EU Drinking Water Directive, EPA MCL List, NY DOH"
+Benzo(a)pyrene,0.00004 mg/L,0.00001 mg/L,0.0002 mg/L,0.0002 mg/L,PAH; known carcinogen. NYS follows EPA.,"Health Canada Technical Document, EU Directive 2020/2184, EPA MCL List, NY DOH"
+Tetrachloroethene (PCE),0.03 mg/L,0.01 mg/L,0.005 mg/L,0.005 mg/L,Solvent; NYS aligns with EPA MCL.,"Health Canada, EU Directive 2020/2184, EPA MCL List, NY DOH"
+Trichloroethene (TCE),0.005 mg/L,0.01 mg/L,0.005 mg/L,0.005 mg/L,Industrial solvent; regulated by NYS.,"Health Canada, EU Directive 2020/2184, EPA MCL List, NY DOH"
+Pesticides (individual),Varies by pesticide,0.0001 mg/L,Varies by pesticide,"Varies (e.g., Aldicarb: 0.003 mg/L)",NYS regulates many pesticides individually.,"Health Canada, EU Drinking Water Directive, EPA Pesticide MCL List, NY DEC"
+Total Pesticides,Not specified,0.0005 mg/L,NR,NR,NYS does not have a total pesticide MCL; regulates selected ones individually.,EU Directive 2020/2184
+Polycyclic Aromatic Hydrocarbons (PAHs),Not specified,0.0001 mg/L (sum of 4 PAHs),NR,NR,Only Benzo(a)pyrene is regulated; other PAHs not covered in NYS MCLs.,EU Directive 2020/2184
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+*Advisory only,,,,,,
