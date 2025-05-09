@@ -104,12 +104,14 @@
   opacity: 0;
   transition: opacity 0.6s ease-in-out;
   font-size: 1.8rem;
-  padding: 20px;
+  padding: 30px;
   border-radius: 10px;
   background-color: #f1f4ee;
   color: #111010;
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-  margin-top: 30px;
+  margin: 30px auto 0;
+  max-width: 600px;
+  text-align: center;
 }
 
 #custom-output.visible {
@@ -181,6 +183,17 @@
     .pac-container {
   z-index: 10000 !important;
     }
+
+    #address-input,
+#floor-input,
+#submit-button {
+  display: block;
+  margin: 10px auto;
+  width: 90%;
+  max-width: 500px;
+  box-sizing: border-box;
+  text-align: center;
+}
   
 
     @media (max-width: 600px) {
@@ -215,6 +228,19 @@
         padding-top: 40px;
         text-align: center;
       }
+
+      h1 {
+  font-size: 2.2rem;
+  padding: 20px 10px;
+  line-height: 1.2;
+  word-break: break-word;
+}
+
+h2 {
+  font-size: 1.5rem;
+  padding: 20px 15px;
+  line-height: 1.3;
+}
     }
 
   
