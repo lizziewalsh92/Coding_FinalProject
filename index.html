@@ -9,7 +9,6 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Cascadia+Code:ital,wght@0,200..700;1,200..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet">
-
     <script>
       window.initAutocomplete = function () {
         const input = document.getElementById('address-input');
@@ -20,6 +19,7 @@
       };
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDmwseo0ESKiivJzGaFsEEDYpkNIogL_TM&libraries=places&callback=initAutocomplete" async defer></script>
+    
 
   <style>
     html,
@@ -111,6 +111,7 @@
       color: #FFF;
       margin-top: 5px;
       text-shadow: 1px 2px 2px #101010;
+      background-color: #72ec0e;
     }
 
     #custom-output.visible {
@@ -179,6 +180,14 @@
       text-align: center;
       background-color: #fff;
     }
+
+    .input-wrapper {
+      position: relative;
+    }
+
+    .pac-container {
+  z-index: 10000 !important;
+    }
   
 
     @media (max-width: 600px) {
@@ -215,17 +224,7 @@
       }
     }
 
-    .input-wrapper {
-      position: relative;
-    }
-
-    .pac-container {
-  z-index: 10000 !important;
-  position: absolute !important;
-  top: 100% !important;
-  left: 0 !important;
-  width: 100% !important;
-}
+  
   </style>
 
 </head>
