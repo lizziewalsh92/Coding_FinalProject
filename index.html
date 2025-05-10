@@ -174,6 +174,7 @@
       margin-top: 5px;
       text-align: center;
       background-color: #fff;
+      border-radius: 1px;
     }
 
     .input-wrapper {
@@ -270,12 +271,13 @@ h2 {
         <p>
           Click <a href="https://www.epa.gov/system/files/documents/2024-06/how-to-id-filters-certified-to-reduce-lead-in-drinking-water-epa_june-2024.pdf" target="_blank">here</a> to learn more about lead filters.
           Click <a href="https://www.nyc.gov/content/leadfree/pages/request-water-test-kit" target="_blank">here</a> to order a lead testing kit from the city.
+          See below to explore the map of NYC water tanks with safety violations.
         </p>
       </div>
       <div id="watertankmap" style="display: none; margin-top: 20px;">
         <iframe title="NYC Water Tanks With 1 or More Safety Violations (2020-Present)"
                 aria-label="Map"
-                src="https://datawrapper.dwcdn.net/nBf2l/1/"
+                src="https://datawrapper.dwcdn.net/nBf2l/8/"
                 scrolling="no"
                 frameborder="0"
                 style="width: 100%; border: none;"
@@ -999,7 +1001,7 @@ h2 {
     const lead = hasLeadPipes(address);
     const tank = isHighFloor && isNearDirtyTank(address);
 
-    const output = `Your apartment ${lead ? "DOES" : " does not"} have lead pipes and ${tank ? "IS" : " is not"} served by a water tank with health code violations.`;
+    const output = `Your apartment ${lead ? "DOES" : " does not"} have known lead pipes and ${tank ? "does" : " does not"} have a water tank with known health code violations.`;
     const outputBox = document.getElementById("custom-output");
 document.getElementById("result-text").innerText = output;
 outputBox.classList.add("visible");
