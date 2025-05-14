@@ -97,7 +97,6 @@
       width: 90%;
       height: 100%;
       color: #FFF;
-      padding: 20px;
     }
 
     #custom-output {
@@ -111,7 +110,6 @@
   color: #111010;
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
   margin: 30px auto 0;
-  margin-bottom: 30px; /* UPDATED*/
   max-width: 600px;
   text-align: center;
 }
@@ -131,7 +129,7 @@
 }
     #address-input {
       width: 90%;
-      padding: 20px;
+      padding: 10px;
       font-size: 1.2rem;
       border-radius: 1px;
       border: 2px solid #72ec0e;
@@ -139,7 +137,7 @@
       color: #000;
     }
 
-    #floor-input {
+   #floor-input {
       width: 90%;
       padding: 10px;
       font-size: 1.2rem;
@@ -150,18 +148,18 @@
     }
 
     .floor-button {
-  background-color: #72ec0e;
-  color: #000;
-  border: none;
-  padding: 15px;
-  font-size: 1.2rem;
-  cursor: pointer;
-  text-align: center;
-  flex: 1;
-  max-width: 200px;
-  min-width: 100px;
-  box-sizing: border-box;
-}
+      background-color: #72ec0e;
+      color: #000;
+      border: none;
+      padding: 15px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      text-align: center;
+      flex: 1;
+      max-width: 200px;
+      min-width: 100px;
+      box-sizing: border-box;
+    }
 
     .floor-button:hover {
       background-color: #fff;
@@ -169,21 +167,24 @@
       border: 2px solid #72ec0e;
     }
 
-/* UPDATED*/
+
   #watertankmap {
   padding: 20px;
-  background-color: white;
+  background-color: #ffffff;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   box-sizing: border-box;
+  margin: 0 auto;
+  max-width: 100%;
+  overflow: hidden;
 }
-
-    /* UPDATED*/
-    #watertankmap iframe {
+#watertankmap iframe {
   width: 100%;
-  height: 945px;
+  height: 990px;
   border: none;
   display: block;
+  max-width: 100%;
+  overflow: visible;
 }
 
     .input-wrapper {
@@ -192,11 +193,12 @@
 
     .pac-container {
   z-index: 10000 !important;
+      position: fixed;
     }
 
     #address-input,
 #floor-input,
-.floor-button {
+#submit-button {
   display: block;
   margin: 10px auto;
   width: 90%;
@@ -204,60 +206,63 @@
   box-sizing: border-box;
   text-align: center;
 }
-    /* UPDATED*/
-@media (max-width: 600px) {
-  #big-container {
-    padding: 15px;
-  }
+  
 
-  h1 {
-    font-size: 1.8rem;
-    padding: 15px 10px;
-    line-height: 1.3;
-  }
+    /* MEDIA QUERIES */
+    @media (max-width: 600px) {
+      #big-container {
+        padding: 15px;
+      }
 
-  h2 {
-    font-size: 1.2rem;
-    padding: 10px 10px;
-    line-height: 1.3;
-  }
+      h1 {
+        font-size: 1.8rem;
+        padding: 15px 10px;
+        line-height: 1.3;
+      }
 
-  .floor-button {
-    font-size: 1rem;
-    padding: 12px;
-    margin: 6px auto;
-    width: 100%;
-    max-width: 100%;
-  }
+      h2 {
+        font-size: 1.2rem;
+        padding: 10px 10px;
+        line-height: 1.3;
+      }
 
-  #address-input,
-  #floor-input {
-    font-size: 1rem;
-    padding: 15px;
-    width: 100%;
-  }
+      .floor-button {
+        font-size: 1rem;
+        padding: 12px;
+        margin: 6px auto;
+        width: 100%;
+        max-width: 100%;
+      }
 
-  #custom-output {
-    width: 100%;
-    font-size: 1rem;
-    padding: 15px;
-    box-sizing: border-box;
-  }
+      #address-input,
+      #floor-input {
+        font-size: 1rem;
+        padding: 15px;
+        width: 100%;
+      }
 
-  #watertankmap {
-    padding: 10px;
-    margin-top: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  }
+      #custom-output {
+        width: 100%;
+        font-size: 1rem;
+        padding: 15px;
+        box-sizing: border-box;
+      }
 
-  #watertankmap iframe {
-    width: 100% !important;
-    height: 80vh !important;
-    max-width: 100%;
-    border: none;
-  }
-}
+      #watertankmap {
+        padding: 10px;
+        margin-top: 30px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      }
+
+      #watertankmap iframe {
+        width: 100% !important;
+        height: 80vh !important;
+        max-width: 100%;
+        border: none;
+      }
+    }
+
   
   </style>
 
@@ -272,37 +277,34 @@
       <div id="interactive1">
         <p>Type your New York City address here:</p>
         <div class="input-wrapper">
-          <input type="text" id="address-input" placeholder="Enter your address" autocomplete="on" />
+          <input type="text" id="address-input" placeholder="Enter your address" autocomplete="off" />
         </div>
         <br>
         <p>Do you live on the sixth floor or higher?</p>
-<div style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-top: 20px">
-  <button class="floor-button" data-floor="yes">Yes</button>
-  <button class="floor-button" data-floor="no">No</button>
-</div>
+        <div style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-top: 20px">
+          <button class="floor-button" data-floor="yes">Yes</button>
+          <button class="floor-button" data-floor="no">No</button>
+        </div>
 
-      <div id="custom-output" style="margin-top: 30px;">
-        <p id="result-text"></p>
-        <p>
-          Click <a href="https://www.epa.gov/system/files/documents/2024-06/how-to-id-filters-certified-to-reduce-lead-in-drinking-water-epa_june-2024.pdf" target="_blank">here</a> to learn more about lead filters.
-          Click <a href="https://www.nyc.gov/content/leadfree/pages/request-water-test-kit" target="_blank">here</a> to order a lead testing kit from the city.
-          See below to explore the map of NYC water tanks with safety violations.
-        </p>
+        <div id="custom-output" style="margin-top: 30px;">
+          <p id="result-text"></p>
+          <p>
+            Click <a
+              href="https://www.epa.gov/system/files/documents/2024-06/how-to-id-filters-certified-to-reduce-lead-in-drinking-water-epa_june-2024.pdf"
+              target="_blank">here</a> to learn more about lead filters.
+            Click <a href="https://www.nyc.gov/content/leadfree/pages/request-water-test-kit" target="_blank">here</a>
+            to order a lead testing kit from the city.
+            See below to explore the map of NYC water tanks with safety violations.
+          </p>
+        </div>
+        <div id="watertankmap" style="display: none;">
+          <iframe title="NYC Water Tanks With 1 or More Safety Violations (2020-Present)" aria-label="Map"
+            src="https://datawrapper.dwcdn.net/nBf2l/8/" scrolling="no" frameborder="0" height="945" data-external="1">
+          </iframe>
+        </div>
       </div>
-     <div id="watertankmap" style="display: none;">
-        <iframe
-          title="NYC Water Tanks With 1 or More Safety Violations (2020-Present)"
-          aria-label="Map"
-          src="https://datawrapper.dwcdn.net/nBf2l/8/"
-          scrolling="no"
-          frameborder="0"
-          height="945"
-          data-external="1">
-        </iframe>
-      </div>
+      <h4>©2025 Lizzie Walsh</h4>
     </div>
-    <h4>©2025 Lizzie Walsh</h4>
-  </div>
   
 
   <script>
@@ -968,82 +970,82 @@
 ]
     let Leadinfo = null;
 
-      // Load the full GeoJSON file, make sure to add ./ so it looks in the folder
+            // Load the full GeoJSON file, make sure to add ./ so it looks in the folder
       fetch('./lead-address-slim.geojson')
-    .then(response => response.json())
-    .then(data => {
-      Leadinfo = data;
-      console.log("Lead pipe data loaded.");
-      Leadinfo.features.forEach(feature => {
-  if (!feature?.properties?.address) {
-    console.warn("Missing address in feature:", feature);
-  }
-});
+        .then(response => response.json())
+        .then(data => {
+          Leadinfo = data;
+          console.log("Lead pipe data loaded.");
+          Leadinfo.features.forEach(feature => {
+            if (!feature?.properties?.address) {
+              console.warn("Missing address in feature:", feature);
+            }
+          });
 
-    })
-    .catch(error => console.error('Error loading lead pipe data:', error));
+        })
+        .catch(error => console.error('Error loading lead pipe data:', error));
 
-    function normalizeAddress(address) {
-    return address.trim().toLowerCase().replace(/\s+/g, ' ');
-  }
+      function normalizeAddress(address) {
+        return address.trim().toLowerCase().replace(/\s+/g, ' ');
+      }
 
-  function isNearDirtyTank(userAddress) {
-    const userNorm = normalizeAddress(userAddress);
-    const tank = Tankinfo.find(t => normalizeAddress(t.ADDRESS) === userNorm);
-    return tank && tank["# OF VIOLATIONS"] > 0;
-  }
+      function isNearDirtyTank(userAddress) {
+        const userNorm = normalizeAddress(userAddress);
+        const tank = Tankinfo.find(t => normalizeAddress(t.ADDRESS) === userNorm);
+        return tank && tank["# OF VIOLATIONS"] > 0;
+      }
 
-  function hasLeadPipes(userAddress) {
-  if (!Leadinfo) return false;
-  const userNorm = normalizeAddress(userAddress);
+      function hasLeadPipes(userAddress) {
+        if (!Leadinfo) return false;
+        const userNorm = normalizeAddress(userAddress);
 
-  return Leadinfo.features.some(feature => {
-    const addr = feature?.properties?.address;
-    return addr && normalizeAddress(addr) === userNorm;
-  });
-}
+        return Leadinfo.features.some(feature => {
+          const addr = feature?.properties?.address;
+          return addr && normalizeAddress(addr) === userNorm;
+        });
+      }
 
-document.querySelectorAll(".floor-button").forEach(button => {
-  button.addEventListener("click", () => {
-    const address = document.getElementById("address-input").value;
-    const isHighFloor = button.dataset.floor === "yes";
+      document.querySelectorAll(".floor-button").forEach(button => {
+        button.addEventListener("click", () => {
+          const address = document.getElementById("address-input").value;
+          const isHighFloor = button.dataset.floor === "yes";
 
-    if (!address) {
-      document.getElementById("custom-output").innerText = "Please enter your address.";
-      return;
-    }
+          if (!address) {
+            document.getElementById("custom-output").innerText = "Please enter your address.";
+            return;
+          }
 
-    const lead = hasLeadPipes(address);
-    const tank = isHighFloor && isNearDirtyTank(address);
+          const lead = hasLeadPipes(address);
+          const tank = isHighFloor && isNearDirtyTank(address);
 
-    const output = `Your apartment ${lead ? "DOES" : " does not"} have known lead pipes and ${tank ? "does" : " does not"} have a water tank with known health code violations.`;
+          const output = `Your apartment ${lead ? "DOES" : " does not"} have known lead pipes and ${tank ? "does" : " does not"} have a water tank with known health code violations.`;
 
-    const outputBox = document.getElementById("custom-output");
-    document.getElementById("result-text").innerText = output;
-    outputBox.classList.add("visible");
-    document.getElementById("watertankmap").style.display = "block";
-  });
-});
-  </script>
-
-  <script>
-    const observerOptions = {
-      threshold: 0.3
-    };
-
-    const revealOnScroll = (entries, observer) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
+          const outputBox = document.getElementById("custom-output");
+          document.getElementById("result-text").innerText = output;
+          outputBox.classList.add("visible");
+          document.getElementById("watertankmap").style.display = "block";
+        });
       });
-    };
+    </script>
 
-    const observer = new IntersectionObserver(revealOnScroll, observerOptions);
-    const targets = document.querySelectorAll('#interactive1, #watertankmap');
-    targets.forEach(target => observer.observe(target));
-  </script>
+    <script>
+      const observerOptions = {
+        threshold: 0.3
+      };
+
+      const revealOnScroll = (entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      };
+
+      const observer = new IntersectionObserver(revealOnScroll, observerOptions);
+      const targets = document.querySelectorAll('#interactive1, #watertankmap');
+      targets.forEach(target => observer.observe(target));
+    </script>
 
 </body>
 
