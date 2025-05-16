@@ -1063,7 +1063,7 @@ return Leadinfo.features.some(feature => {
           const lead = hasLeadPipes(address);
           const tank = isHighFloor && isNearDirtyTank(address);
 
-          const output = `Your apartment ${lead ? "DOES" : " does not"} have known lead pipes and ${tank ? "does" : " does not"} have a water tank with known health code violations.`;
+          const output = `Your apartment ${lead ? "DOES" : " does not"} have known lead pipes and ${tank ? "DOES" : " does not"} have a water tank with known health code violations.`;
 
           const outputBox = document.getElementById("custom-output");
           document.getElementById("result-text").innerText = output;
