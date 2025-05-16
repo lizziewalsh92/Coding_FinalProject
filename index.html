@@ -1063,10 +1063,10 @@ return Leadinfo.features.some(feature => {
           const lead = hasLeadPipes(address);
           const tank = isHighFloor && isNearDirtyTank(address);
 
-          const output = `Your apartment ${lead ? "DOES" : " does not"} have known lead pipes and ${tank ? "DOES" : " does not"} have a water tank with known health code violations.`;
+          const output = `Your apartment ${lead ? "<span style='background-color: yellow; color: black; font-weight: bold;'>DOES</span>" : "does not"} have known lead pipes and ${tank ? "<span style='background-color: yellow; color: black; font-weight: bold;'>DOES</span>" : "does not"} have a water tank with known health code violations.`;
 
           const outputBox = document.getElementById("custom-output");
-          document.getElementById("result-text").innerText = output;
+          document.getElementById("result-text").innerHTML = output;
           outputBox.classList.add("visible");
           document.getElementById("watertankmap").style.display = "block";
         });
@@ -1095,5 +1095,4 @@ return Leadinfo.features.some(feature => {
 </body>
 
 </html>
- 
  
