@@ -1003,14 +1003,14 @@
       }
 
       function hasLeadPipes(userAddress) {
-        if (!Leadinfo) return false;
-        const userNorm = normalizeAddress(userAddress);
+  if (!Leadinfo) return false;
+  const userNorm = normalizeAddress(userAddress);
 
-        return Leadinfo.features.some(feature => {
-          const addr = feature?.properties?.address;
-          return addr && normalizeAddress(addr) === userNorm;
-        });
-      }
+  return Leadinfo.features.some(feature => {
+    const addr = feature?.properties?.address || feature?.properties?.ADDRESS_NORM;
+    return addr && normalizeAddress(addr) === userNorm;
+  });
+}
 
       document.querySelectorAll(".floor-button").forEach(button => {
         button.addEventListener("click", () => {
