@@ -978,7 +978,7 @@
     let Leadinfo = null;
 
             // Load the full GeoJSON file, make sure to add ./ so it looks in the folder
-      fetch('./lead-address-slim.geojson')
+      fetch('https://www.googleapis.com/drive/v3/files/1SEo5FTvbLgpWgdlYPp4WVs8-ha_LrXQJ?alt=media&key=AIzaSyCW-4qw86ETb-0-mpiY9IMP-nke2TiPOOU') 
         .then(response => response.json())
         .then(data => {
           Leadinfo = data;
@@ -992,23 +992,42 @@
         })
         .catch(error => console.error('Error loading lead pipe data:', error));
 
-      function normalizeAddress(address) {
-        return address.trim().toLowerCase().replace(/\s+/g, ' ');
-      }
+        function normalizeAddress(address) {
+  return address.trim()
+    .toLowerCase()
+    .replace(/\s+/g, ' ')
+    .replace(/\bstreet\b/g, 'st')
+    .replace(/\bavenue\b/g, 'ave')
+    .replace(/\broad\b/g, 'rd')
+    .replace(/\bplace\b/g, 'pl')
+    .replace(/\bdrive\b/g, 'dr')
+    .replace(/\bqueens\b/g, '')
+    .replace(/\bnew york\b/g, '')
+    .replace(/,/g, '')
+    .replace(/\s{2,}/g, ' ')
+    .trim();
+}
 
-      function isNearDirtyTank(userAddress) {
-        const userNorm = normalizeAddress(userAddress);
-        const tank = Tankinfo.find(t => normalizeAddress(t.ADDRESS) === userNorm);
-        return tank && tank["# OF VIOLATIONS"] > 0;
-      }
-
-      function hasLeadPipes(userAddress) {
-  if (!Leadinfo) return false;
+function isNearDirtyTank(userAddress) {
   const userNorm = normalizeAddress(userAddress);
 
-  return Leadinfo.features.some(feature => {
-    const addr = feature?.properties?.address || feature?.properties?.ADDRESS_NORM;
-    return addr && normalizeAddress(addr) === userNorm;
+  return Tankinfo.some(t => {
+    const tankNorm = normalizeAddress(t.ADDRESS);
+    return (
+      tankNorm === userNorm || 
+      tankNorm.includes(userNorm) || 
+      userNorm.includes(tankNorm)
+    ) && t["# OF VIOLATIONS"] > 0;
+  });
+}
+
+      function hasLeadPipes(userAddress) {
+        if (!Leadinfo) return false;
+        const userNorm = normalizeAddress(userAddress);
+
+      return Leadinfo.features.some(feature => {
+        const addr = feature?.properties?.FullAddress;
+        return addr && normalizeAddress(addr) === userNorm;
   });
 }
 
