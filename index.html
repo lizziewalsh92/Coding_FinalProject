@@ -1051,7 +1051,7 @@ return Leadinfo.features.some(feature => {
       }
 
       document.querySelectorAll(".floor-button").forEach(button => {
-        button.addEventListener("click", () => {s
+        button.addEventListener("click", () => {
           const address = document.getElementById("address-input").value;
           const isHighFloor = button.dataset.floor === "yes";
 
@@ -1063,10 +1063,10 @@ return Leadinfo.features.some(feature => {
           const lead = hasLeadPipes(address);
           const tank = isHighFloor && isNearDirtyTank(address);
 
-          const output = `Your apartment ${lead ? "<strong>DOES</strong>" : " does not"} have known lead pipes and ${tank ? "<strong>DOES</strong>" : " does not"} have a water tank with known health code violations.`;
+          const output = `Your apartment ${lead ? "DOES" : " does not"} have known lead pipes and ${tank ? "does" : " does not"} have a water tank with known health code violations.`;
 
           const outputBox = document.getElementById("custom-output");
-          document.getElementById("result-text").innerHTML = output;
+          document.getElementById("result-text").innerText = output;
           outputBox.classList.add("visible");
           document.getElementById("watertankmap").style.display = "block";
         });
@@ -1095,4 +1095,5 @@ return Leadinfo.features.some(feature => {
 </body>
 
 </html>
+ 
  
