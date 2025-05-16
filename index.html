@@ -978,23 +978,26 @@
 
     let Leadinfo = null;
 
-            // Load the full GeoJSON file, make sure to add ./ so it looks in the folder
-      fetch('https://www.googleapis.com/drive/v3/files/1SEo5FTvbLgpWgdlYPp4WVs8-ha_LrXQJ?alt=media&key=AIzaSyAL5PtDf5j--vnHL8AqIS2WVeOEx_-Ywko') 
-        .then(response => response.json())
-        .then(data => {
-          Leadinfo = data;
-          console.log("Lead pipe data loaded. Sample entry:", data.features?.[0]?.properties?.FullAddress);
-          Leadinfo.features.forEach(feature => {
-            if (!feature?.properties?.address) {
-              console.warn("Missing address in feature or bad FullAddress:", feature);
-            }
-          });
-
-        })
-        .catch(error => console.error('Error loading lead pipe data:', error));
-
-        function normalizeAddress(address) {
-  return address.trim()
+    fetch('https://www.googleapis.com/drive/v3/files/1SEo5FTvbLgpWgdlYPp4WVs8-ha_LrXQJ?alt=media&key=AIzaSyAL5PtDf5j--vnHL8AqIS2WVeOEx_-Ywko')
+  .then(response => {
+    if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+    return response.json();
+  })
+  .then(data => {
+    Leadinfo = data;
+    console.log("Lead pipe data loaded. Sample entry:", data.features?.[0]?.properties?.FullAddress);
+    Leadinfo.features.forEach(feature => {
+      if (!feature?.properties?.FullAddress) {
+        console.warn("Missing address in feature or bad FullAddress:", feature);
+      }
+    });
+  })
+  .catch(error => console.error('Error loading lead pipe data:', error));
+       
+  function normalizeAddress(address) {
+  if (!address || typeof address !== 'string') return '';
+  return address
+    .trim()
     .toLowerCase()
     .replace(/\s+/g, ' ')
     .replace(/\bstreet\b/g, 'st')
@@ -1002,15 +1005,19 @@
     .replace(/\broad\b/g, 'rd')
     .replace(/\bplace\b/g, 'pl')
     .replace(/\bdrive\b/g, 'dr')
+    .replace(/\bbrooklyn\b/g, '')
+    .replace(/\bmanhattan\b/g, '')
     .replace(/\bqueens\b/g, '')
-    .replace(/\bnew york\b/g, '')
+    .replace(/\bbronx\b/g, '')
+    .replace(/\bny\b/g, '')
+    .replace(/\busa\b/g, '')
     .replace(/,/g, '')
     .replace(/\s{2,}/g, ' ')
     .trim();
 }
 
-function isNearDirtyTank(userAddress) {
-  const userNorm = normalizeAddress(userAddress);
+function isNearDirtyTank(address) {
+  const userNorm = normalizeAddress(address);
   console.log("Checking tank info for:", userNorm);
 
   return Tankinfo.some(t => {
@@ -1024,20 +1031,27 @@ function isNearDirtyTank(userAddress) {
   });
 }
 
-      function hasLeadPipes(userAddress) {
+      function hasLeadPipes(address) {
         if (!Leadinfo) return false;
-        const userNorm = normalizeAddress(userAddress);
+        const userNorm = normalizeAddress(address);
         console.log("Checking for lead pipes at:", userNorm);
 
-      return Leadinfo.features.some(feature => {
-        const addr = feature?.properties?.FullAddress;
-        console.log("Comparing to:", normalizeAddress(addr));
-        return addr && normalizeAddress(addr) === userNorm;
-  });
-}
+return Leadinfo.features.some(feature => {
+  const addr = feature?.properties?.FullAddress;
+  if (!addr) {
+    console.warn("Skipping bad address entry:", feature);
+    return false;
+  }
+    console.log("Normalized user address:", userNorm);
+    console.log("Normalized dataset address:", normalizeAddress(addr));
+
+  console.log("Comparing to:", normalizeAddress(addr));
+  return normalizeAddress(addr) === userNorm;
+});
+      }
 
       document.querySelectorAll(".floor-button").forEach(button => {
-        button.addEventListener("click", () => {
+        button.addEventListener("click", () => {s
           const address = document.getElementById("address-input").value;
           const isHighFloor = button.dataset.floor === "yes";
 
@@ -1049,10 +1063,10 @@ function isNearDirtyTank(userAddress) {
           const lead = hasLeadPipes(address);
           const tank = isHighFloor && isNearDirtyTank(address);
 
-          const output = `Your apartment ${lead ? "DOES" : " does not"} have known lead pipes and ${tank ? "does" : " does not"} have a water tank with known health code violations.`;
+          const output = `Your apartment ${lead ? "<strong>DOES</strong>" : " does not"} have known lead pipes and ${tank ? "<strong>DOES</strong>" : " does not"} have a water tank with known health code violations.`;
 
           const outputBox = document.getElementById("custom-output");
-          document.getElementById("result-text").innerText = output;
+          document.getElementById("result-text").innerHTML = output;
           outputBox.classList.add("visible");
           document.getElementById("watertankmap").style.display = "block";
         });
