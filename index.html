@@ -983,10 +983,10 @@
         .then(response => response.json())
         .then(data => {
           Leadinfo = data;
-          console.log("Lead pipe data loaded.");
+          console.log("Lead pipe data loaded. Sample entry:", data.features?.[0]?.properties?.FullAddress);
           Leadinfo.features.forEach(feature => {
             if (!feature?.properties?.address) {
-              console.warn("Missing address in feature:", feature);
+              console.warn("Missing address in feature or bad FullAddress:", feature);
             }
           });
 
@@ -1011,9 +1011,11 @@
 
 function isNearDirtyTank(userAddress) {
   const userNorm = normalizeAddress(userAddress);
+  console.log("Checking tank info for:", userNorm);
 
   return Tankinfo.some(t => {
-    const tankNorm = normalizeAddress(t.ADDRESS);
+    const tankNorm = normalizeAddress(t.FullAddress);
+    console.log("Comparing to tank:", tankNorm);
     return (
       tankNorm === userNorm || 
       tankNorm.includes(userNorm) || 
@@ -1025,9 +1027,11 @@ function isNearDirtyTank(userAddress) {
       function hasLeadPipes(userAddress) {
         if (!Leadinfo) return false;
         const userNorm = normalizeAddress(userAddress);
+        console.log("Checking for lead pipes at:", userNorm);
 
       return Leadinfo.features.some(feature => {
         const addr = feature?.properties?.FullAddress;
+        console.log("Comparing to:", normalizeAddress(addr));
         return addr && normalizeAddress(addr) === userNorm;
   });
 }
