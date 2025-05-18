@@ -986,35 +986,36 @@
   .then(data => {
     Leadinfo = data;
     console.log("Lead pipe data loaded. Sample entry:", data.features?.[0]?.properties?.FullAddress);
-    Leadinfo.features.forEach(feature => {
-      if (!feature?.properties?.FullAddress) {
-        console.warn("Missing address in feature or bad FullAddress:", feature);
+    Leadinfo.features.forEach((feature, i) => {
+      if (!feature?.properties?.FullAddress || typeof feature.properties.FullAddress !== 'string') {
+        console.warn(`Skipping invalid FullAddress at index ${i}`);
       }
     });
   })
   .catch(error => console.error('Error loading lead pipe data:', error));
        
   function normalizeAddress(address) {
-  if (!address || typeof address !== 'string') return '';
-  return address
-    .trim()
-    .toLowerCase()
-    .replace(/\s+/g, ' ')
-    .replace(/\bstreet\b/g, 'st')
-    .replace(/\bavenue\b/g, 'ave')
-    .replace(/\broad\b/g, 'rd')
-    .replace(/\bplace\b/g, 'pl')
-    .replace(/\bdrive\b/g, 'dr')
-    .replace(/\bbrooklyn\b/g, '')
-    .replace(/\bmanhattan\b/g, '')
-    .replace(/\bqueens\b/g, '')
-    .replace(/\bbronx\b/g, '')
-    .replace(/\bny\b/g, '')
-    .replace(/\busa\b/g, '')
-    .replace(/,/g, '')
-    .replace(/\s{2,}/g, ' ')
-    .trim();
-}
+    if (!address || typeof address !== 'string') return '';
+    return address
+      .trim()
+      .toLowerCase()
+      .replace(/\bapt\b.*$/i, '') // Remove apartment info
+      .replace(/\bfloor\b.*$/i, '') // Remove floor info
+      .replace(/\b(street|st)\b/g, 'st')
+      .replace(/\b(avenue|ave)\b/g, 'ave')
+      .replace(/\b(road|rd)\b/g, 'rd')
+      .replace(/\b(place|pl)\b/g, 'pl')
+      .replace(/\b(drive|dr)\b/g, 'dr')
+      .replace(/\b(terrace|ter)\b/g, 'ter')
+      .replace(/\b(boulevard|blvd)\b/g, 'blvd')
+      .replace(/\b(court|ct)\b/g, 'ct')
+      .replace(/\b(brooklyn|manhattan|queens|bronx|ny|usa)\b/g, '')
+      .replace(/\b\d{5}(?:-\d{4})?\b/g, '') // remove ZIP codes
+      .replace(/[^\w\s]/g, '') // remove punctuation
+      .replace(/\s+/g, ' ')
+      .replace(/,+$/, '') // remove trailing commas (if any)
+      .trim();
+  }
 
 function isNearDirtyTank(address) {
   const userNorm = normalizeAddress(address);
@@ -1031,23 +1032,53 @@ function isNearDirtyTank(address) {
   });
 }
 
+      function extractKeyParts(addr) {
+        const normalized = normalizeAddress(addr).replace(/\b\d{5}(?:-\d{4})?\b/g, '').trim();
+        const match = normalized.match(/^(\d{1,5})\s+(.+)$/);
+        if (!match) return null;
+        return {
+          number: match[1],
+          street: match[2].trim()
+        };
+      }
+
       function hasLeadPipes(address) {
-        if (!Leadinfo) return false;
+        if (!Leadinfo) return "Unknown";
+
         const userNorm = normalizeAddress(address);
-        console.log("Checking for lead pipes at:", userNorm);
+        const userParts = extractKeyParts(userNorm);
+        if (!userParts) {
+          console.warn("Could not parse user address:", userNorm);
+          return "Unknown";
+        }
 
-return Leadinfo.features.some(feature => {
-  const addr = feature?.properties?.FullAddress;
-  if (!addr) {
-    console.warn("Skipping bad address entry:", feature);
-    return false;
-  }
-    console.log("Normalized user address:", userNorm);
-    console.log("Normalized dataset address:", normalizeAddress(addr));
+        console.log("Checking for lead pipes at:", userParts);
 
-  console.log("Comparing to:", normalizeAddress(addr));
-  return normalizeAddress(addr) === userNorm;
-});
+        let bestMatch = "Unknown";
+
+        for (const feature of Leadinfo.features) {
+          const rawAddr = feature?.properties?.FullAddress;
+          const material = feature?.properties?.MATERIAL_GROUP;
+          if (!rawAddr || !material) continue;
+
+          const datasetParts = extractKeyParts(normalizeAddress(rawAddr));
+          if (!datasetParts) continue;
+
+          const isMatch =
+            userParts.number === datasetParts.number &&
+            userParts.street === datasetParts.street;
+
+          if (isMatch) {
+            console.warn("✅ Lead pipe match:", rawAddr, "<-->", address);
+
+            if (material.trim() === "Lead" || material.trim() === "Potential Lead") return "Lead";
+            if (material.trim() === "Unknown" && bestMatch === "Unknown") bestMatch = "Unknown";
+            if (material.trim() === "Not Lead" && bestMatch === "Unknown") bestMatch = "Not Lead";
+            if (material.trim() === "Non-Applicable" && bestMatch === "Unknown") bestMatch = "Not Applicable";
+          }
+        }
+
+        return bestMatch;
       }
 
       document.querySelectorAll(".floor-button").forEach(button => {
@@ -1060,11 +1091,17 @@ return Leadinfo.features.some(feature => {
             return;
           }
 
-          const lead = hasLeadPipes(address);
-          const tank = isHighFloor && isNearDirtyTank(address);
+const leadStatus = hasLeadPipes(address);
+const leadOutput = {
+  "Lead": "has <span style='background-color: yellow; color: black; font-weight: bold;'>LEAD</span> or <span style='background-color: yellow; color: black; font-weight: bold;'>POTENTIAL LEAD</span> pipes",
+  "Unknown": "has an <span style='background-color: yellow; color: black; font-weight: bold;'>UNKNOWN</span> pipe material",
+  "Not Lead": "has <span style='background-color: yellow; color: black; font-weight: bold;'>NO LEAD</span> pipes",
+  "Not Applicable": "has a <span style='background-color: yellow; color: black; font-weight: bold;'>NON-APPLICABLE</span> pipe record"
+}[leadStatus] || "has an unknown pipe status";
 
-          const output = `Your apartment ${lead ? "<span style='background-color: yellow; color: black; font-weight: bold;'>DOES</span>" : "does not"} have known lead pipes and ${tank ? "<span style='background-color: yellow; color: black; font-weight: bold;'>DOES</span>" : "does not"} have a water tank with known health code violations.`;
+const tank = isHighFloor && isNearDirtyTank(address);
 
+const output = `Your apartment ${leadOutput} and ${tank ? "<span style='background-color: yellow; color: black; font-weight: bold;'>DOES</span>" : "does not"} have a water tank with known health code violations.`;
           const outputBox = document.getElementById("custom-output");
           document.getElementById("result-text").innerHTML = output;
           outputBox.classList.add("visible");
