@@ -295,12 +295,14 @@
 
         <div id="custom-output" style="margin-top: 30px;">
           <p id="result-text"></p>
-          <p>
-            Click <a
-              href="https://www.epa.gov/system/files/documents/2024-06/how-to-id-filters-certified-to-reduce-lead-in-drinking-water-epa_june-2024.pdf"
-              target="_blank">here</a> to learn more about lead filters.
-            Click <a href="https://www.nyc.gov/content/leadfree/pages/request-water-test-kit" target="_blank">here</a>
+          <p> If you have an unknown pipe status or potential lead status, click <a href="https://www.nyc.gov/content/leadfree/pages/request-water-test-kit" target="_blank">here</a>
             to order a lead testing kit from the city.
+            <br>
+            <br>
+            To learn more about lead filters, click <a
+              href="https://www.epa.gov/system/files/documents/2024-06/how-to-id-filters-certified-to-reduce-lead-in-drinking-water-epa_june-2024.pdf"
+              target="_blank">here</a>.
+            <br>
             See below to explore the map of NYC water tanks with safety violations.
           </p>
         </div>
@@ -1072,9 +1074,9 @@ function isNearDirtyTank(address) {
             console.warn("✅ Lead pipe match:", rawAddr, "<-->", address);
 
             if (material.trim() === "Lead" || material.trim() === "Potential Lead") return "Lead";
-            if (material.trim() === "Unknown" && bestMatch === "Unknown") bestMatch = "Unknown";
-            if (material.trim() === "Not Lead" && bestMatch === "Unknown") bestMatch = "Not Lead";
-            if (material.trim() === "Non-Applicable" && bestMatch === "Unknown") bestMatch = "Not Applicable";
+            if (material.trim() === "Unknown" && bestMatch !== "Lead") bestMatch = "Potential Lead";
+            if (material.trim() === "Non-Applicable" && bestMatch === "Unknown") bestMatch = "Unknown";
+            if (material.trim() === "Not Lead" && (bestMatch === "Unknown" || bestMatch === "Potential Lead")) bestMatch = "Not Lead";
           }
         }
 
